@@ -1,13 +1,13 @@
-package com.redsocial;
+package com.examen02;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RestMovil01Application {
+public class RestMovil02Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RestMovil01Application.class, args);
+		SpringApplication.run(RestMovil02Application.class, args);
 	}
 
 }

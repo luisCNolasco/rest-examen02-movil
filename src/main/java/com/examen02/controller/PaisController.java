@@ -1,4 +1,4 @@
-package com.redsocial.controller;
+package com.examen02.controller;
 
 import java.util.List;
 
@@ -8,19 +8,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.redsocial.entity.Grado;
-import com.redsocial.service.GradoService;
+import com.examen02.entity.Pais;
+import com.examen02.service.PaisService;
 
 @RestController
-@RequestMapping("/api/rest/grado/")
-public class GradoController {
+@RequestMapping("/api/rest/pais/")
+public class PaisController {
 
 	@Autowired
-	private GradoService service;
-
+	private PaisService service;
+	
 	@GetMapping
-	public ResponseEntity<List<Grado>> lista() {
-		return ResponseEntity.ok(service.listaGrado());
+	public ResponseEntity<List<Pais>> lista(){
+		return ResponseEntity.ok(service.listaPais());
 	}
-
 }

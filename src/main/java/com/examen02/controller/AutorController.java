@@ -1,4 +1,4 @@
-package com.redsocial.controller;
+package com.examen02.controller;
 
 import java.util.List;
 
@@ -10,27 +10,23 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.redsocial.entity.Director;
-import com.redsocial.service.DirectorService;
+import com.examen02.entity.Autor;
+import com.examen02.service.AutorService;
 
 @RestController
-@RequestMapping("/api/rest/director/")
-public class DirectorController {
-	
+@RequestMapping("/api/rest/autor/")
+public class AutorController {
+
 	@Autowired
-	private DirectorService service;
+	private AutorService service;
 	
 	@PostMapping
-	public ResponseEntity<Director> inserta(@RequestBody Director obj){
+	public ResponseEntity<Autor>inserta(@RequestBody Autor obj){
 		return ResponseEntity.ok(service.inserta(obj));
 	}
 	
 	@GetMapping
-	public ResponseEntity<List<Director>> lista() {
-		return ResponseEntity.ok(service.listaDirector());
+	public ResponseEntity<List<Autor>>listaAutor(){
+		return ResponseEntity.ok(service.listaAutor());
 	}
-	
 }
-
-
-
